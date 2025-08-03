@@ -19,8 +19,25 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.btn {
+  @apply bg-teal-600 text-white py-2 px-4 rounded hover:bg-teal-700;
+}
+.btn-dir {
+  @apply bg-blue-600 text-white text-2xl rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-blue-700 active:scale-95 transition;
+}
+
+.btn-dir.stop {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+.btn-blade-on {
+  @apply bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 active:scale-95 transition;
+}
+
+.btn-blade-off {
+  @apply bg-gray-600 text-white px-6 py-2 rounded-full hover:bg-gray-700 active:scale-95 transition;
+}
+
+.btn-speed {
+  @apply bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 active:scale-95 transition;
 }
