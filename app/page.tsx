@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <main className="scifi-container">
+    <main className="scifi-container font-extrabold">
       <div className="ip-pair-row">
         <label htmlFor="ipInput" className="ip-label">
           ESP8266 IP:
@@ -79,16 +79,16 @@ export default function Home() {
           className="arrow-btn arrow-left"
           onClick={() => sendCommand("L")}
         >
-          ←
+          <div className="-translate-y-1"> ←</div>
         </button>
         <button className="arrow-btn stop-btn" onClick={() => sendCommand("S")}>
-          ■
+          <div className="-translate-y-0.5"> ■</div>
         </button>
         <button
           className="arrow-btn arrow-right"
           onClick={() => sendCommand("R")}
         >
-          →
+          <div className="-translate-y-1">→</div>
         </button>
         <button
           className="arrow-btn arrow-down"
