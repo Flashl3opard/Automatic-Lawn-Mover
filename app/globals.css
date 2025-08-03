@@ -41,3 +41,305 @@
 .btn-speed {
   @apply bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 active:scale-95 transition;
 }
+
+/* Container with subtle dark-blue-gray sci-fi vibe */
+.scifi-container {
+  min-height: 100vh;
+  background: #1e262b;
+  color: #c0c8cc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Row for IP input + pair button */
+.ip-pair-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .ip-pair-row {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .ip-label {
+    min-width: auto;
+    font-size: 0.9rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .ip-input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .pair-btn {
+    width: 100%;
+    padding: 0.6rem 0;
+    font-size: 1rem;
+  }
+}
+
+/* IP label subtle and small */
+.ip-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #8ba0aa;
+  min-width: 90px;
+  user-select: none;
+}
+
+/* Input with subtle sci-fi border and background */
+.ip-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #44525f;
+  background-color: #28343d;
+  color: #c0c8cc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+/* Highlight border on focus */
+.ip-input:focus {
+  border-color: #00b3ff;
+  box-shadow: 0 0 6px #00b3ff88;
+  background-color: #1f2a33;
+  color: #e0ebf1;
+}
+
+/* Pair button: minimal, soft shine */
+.pair-btn {
+  background-color: #006ddb;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.pair-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pair-btn:not(:disabled):hover {
+  background-color: #0095ff;
+}
+
+/* Circular control pad container */
+.circle-pad {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #222b31, #1b2227);
+  box-shadow:
+    inset 0 0 18px #1379ff55,
+    0 0 20px #1379ff77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons are matte with subtle neon edges */
+.arrow-btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2e3740, #232c33);
+  border: 2px solid #1379ff50;
+  color: #84baf9;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 0 2px #1379ff88,
+    inset 0 0 6px #1379ff55;
+}
+
+.arrow-btn:hover {
+  background: #1379ff10;
+  color: #00b1ff;
+  box-shadow:
+    0 0 8px #00b1ffcc,
+    inset 0 0 10px #00b1ff88;
+}
+
+.arrow-btn:active {
+  background: #00b1ff33;
+  box-shadow:
+    0 0 14px #00b1ffee,
+    inset 0 0 14px #00b1ffcc;
+  color: #e0f7ff;
+}
+
+/* Positions for arrow buttons */
+.arrow-up { top: 16px; left: 120px; }
+.arrow-down { bottom: 16px; left: 120px; }
+.arrow-left { top: 120px; left: 16px; }
+.arrow-right { top: 120px; right: 16px; }
+
+/* Stop button distinct red */
+.stop-btn {
+  top: 120px;
+  left: 120px;
+  background: linear-gradient(145deg, #4a0f0f, #300909);
+  border-color: #ff4433bb;
+  color: #ff7b71;
+  box-shadow:
+    0 0 6px #ff5544aa,
+    inset 0 0 10px #ff4433bb;
+}
+
+.stop-btn:hover {
+  background: #ff553322;
+  color: #ff9a91;
+  box-shadow:
+    0 0 14px #ff4433dd,
+    inset 0 0 18px #ff4433cc;
+}
+
+.stop-btn:active {
+  background: #ff443355;
+  color: #fff0ef;
+  box-shadow:
+    0 0 22px #ff4433ee,
+    inset 0 0 24px #ff6655ff;
+}
+
+/* Blade control container */
+.blade-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #222b31;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow:
+    0 0 10px #1379ff33,
+    inset 0 0 12px #1379ff55;
+  user-select: none;
+}
+
+/* Blade label */
+.blade-label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #8ba0aa;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #444f59;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.3s ease;
+  box-shadow: inset 0 0 4px #222b31;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #882222;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 4px #82222abb;
+}
+
+input:checked + .slider {
+  background-color: #1379ff;
+  box-shadow: inset 0 0 8px #139effdd;
+}
+
+input:checked + .slider:before {
+  background-color: #00aaff;
+  box-shadow: 0 0 8px #00aaffee;
+  transform: translateX(26px);
+}
+
+/* Blade status text */
+.blade-status {
+  font-weight: 600;
+  font-size: 1.25rem;
+  width: 50px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.blade-status.on {
+  color: #00aaff;
+  text-shadow:
+    0 0 6px #00aaffcc,
+    0 0 12px #00aaff99;
+}
+
+.blade-status.off {
+  color: #882222;
+  text-shadow:
+    0 0 6px #882222cc,
+    0 0 12px #88222299;
+}
+
+/* Status message */
+.status-message {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #82b1ffcc;
+  background-color: #182230;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  box-shadow:
+    0 0 8px #1379ff66,
+    inset 0 0 10px #1379ff99;
+  max-width: 360px;
+  text-align: center;
+  user-select: none;
+  min-height: 1.4em;
+}
